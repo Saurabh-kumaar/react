@@ -24,13 +24,10 @@ function Ludo() {
     });
   };
 
-
-
-  
   return (
   <div>
-    <p>Game Begins!</p>
-    <div className="board">
+    <p style={{ fontSize: "24px", fontWeight: "bold"}}>Counter Game!</p>
+    <div className="board" style={{ height: "400px", width: "300px", border: "2px solid black", padding: "20px"}}>
       <p>Blue Moves = {moves.blue} </p>
       <button style={{ backgroundColor: "blue"}} onClick={updateBlue}>+1</button> 
       <p>Yellow Moves = {moves.yellow } </p>
