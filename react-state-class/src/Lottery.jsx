@@ -29,7 +29,7 @@ function Count() {
   let buyTicket = () => {
     setTicket(getTicket(3)); 
   }
-jSNDJA 
+
   return (
     <div>
       <h1>Lottery-Game</h1>
