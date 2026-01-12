@@ -11,8 +11,7 @@ import Ticket from "./Ticket";
 function App() {  
   return (
     <>  
-    <Ticket ticket={[0, 1, 2]} /> 
-    <Ticket ticket={[4, 2, 6, 8]} /> 
+    <Lottery  n={3} winningSum={15} />
   
     {/* <TodoList /> */}
     {/* // <Ludo />  */}

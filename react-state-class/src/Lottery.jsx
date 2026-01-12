@@ -1,6 +1,7 @@
 import { useState } from "react";
 import { getTicket, sum } from "./helper.js"; 
 import  "./Lottery.css";  
+import Ticket from "./Ticket"
 
 // ================== 1st way ================== 
 // function App() {
@@ -22,28 +23,24 @@ import  "./Lottery.css";
 
 // ========================== 2nd way ====================  
 
-function Count() { 
-  const [ticket, setTicket] = useState(getTicket(3)); 
-  let isWinnig = sum(ticket) === 15;  
+function Count({ n=3, winningSum=15 }) { 
+  const [ticket, setTicket] = useState(getTicket(n)); 
+  let isWinnig = sum(ticket) === winningSum;  
 
   let buyTicket = () => {
-    setTicket(getTicket(3)); 
+    setTicket(getTicket(n)); 
   }
 
-  return (
-    <div>
+  return ( 
+     <div>
       <h1>Lottery-Game</h1>
-      <div className="ticket"> 
-        <span>{ticket[0]}</span>
-        <span>{ticket[1]}</span>
-        <span>{ticket[2]}</span>
-       </div>  
+       <Ticket ticket={ticket}/> 
        <br />
        <button onClick={buyTicket}>Buy New Ticket</button>
        <h3>{isWinnig && "Congratulations, you won!"}</h3>
-    </div>
+     </div>
   )
-}
+}ad 
 
 export default Count;
 
