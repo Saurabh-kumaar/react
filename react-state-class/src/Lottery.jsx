@@ -40,7 +40,7 @@ function Count({ n=3, winningSum=15 }) {
        <h3>{isWinnig && "Congratulations, you won!"}</h3>
      </div>
   )
-}ad 
+}ad alkdjf 
 
 export default Count;
 
