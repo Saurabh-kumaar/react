@@ -5,20 +5,19 @@ import Counter from "./Counter.jsx"
 import Ludo from "./Ludo.jsx";  
 import TodoList from "./TodoList.jsx"; 
 import Lottery from "./Lottery.jsx"; 
-import Ticket from "./Ticket"; 
+import Ticket from "./Ticket";  
+import Form from "./Form"; 
 
 
 function App() {  
   return (
     <>  
-    <Lottery  n={3} winningSum={15} />
-  
-    {/* <TodoList /> */}
-    {/* // <Ludo />  */}
+    <Form />
+   
      </>
   )
 }
-
+ 
 
 export default App;
 
