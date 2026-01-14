@@ -7,7 +7,7 @@ export default function Form() {
     console.log(event.target.value); 
   }; 
 
-  return (
+  return (akldjfkj 
     <form>
       <label htmlFor="username">FullName &nbsp;</label> 
       <input placeholder="enter full name" 
