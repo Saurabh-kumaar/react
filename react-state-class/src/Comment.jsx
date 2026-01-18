@@ -1,4 +1,5 @@
 import {useState} from 'react';
+import CommentsForm from './CommentsForm';
 
 export default function Comment() { 
   let [comments, setComments] = useState([
@@ -6,19 +7,29 @@ export default function Comment() {
       username: "@Aura+", 
       remarks: "it's great job!", 
       rating: 4, 
-    }
-  ])
+    }, 
+  ]); 
+  
+  let addNewComment = (comment) => {
+    setComments((currComments) => [...currComments, comment]); 
+  }
 
-  return (
+  return ( 
+    <> 
     <div>
-      <h2>Hello ji</h2> 
-      <div className='comment'>
-        <span>{comments[0].remarks}</span>
+      <h2>All Comments</h2>  
+      {comments.map((comment, idx) => (
+      <div className='comment' key={idx}>
+        <span>{comment.remarks}</span>
         &nbsp; 
-        <span>(rating = {comments[0].rating})</span>
-        <p>- {comments[0].username}</p>
+        <span>(rating = {comment.rating})</span>
+        <p>- {comment.username}</p>
       </div>
-    </div>
+      ))}
+    </div>   
+    <hr></hr>
+    <CommentsForm addNewComment={addNewComment} /> 
+    </> 
   )
 }
 
