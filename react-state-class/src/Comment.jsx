@@ -13,7 +13,7 @@ export default function Comment() {
   let addNewComment = (comment) => {
     setComments((currComments) => [...currComments, comment]); 
   }
-j
+jakjdfjf 
   return ( 
     <> 
     <div>
