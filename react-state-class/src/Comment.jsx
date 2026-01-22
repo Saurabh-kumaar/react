@@ -13,11 +13,11 @@ export default function Comment() {
   let addNewComment = (comment) => {
     setComments((currComments) => [...currComments, comment]); 
   }
-ojjklsd f
+
   return ( 
     <> 
     <div>
-      <h2>All Comments</h2>  
+      <h2>All Comments here </h2>  
       {comments.map((comment, idx) => (
       <div className='comment' key={idx}>
         <span>{comment.remarks}</span>
